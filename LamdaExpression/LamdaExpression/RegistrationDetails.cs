@@ -26,7 +26,7 @@ namespace LambdaUserRegistration
             {
                 if (firstName.Equals(string.Empty))
                 {
-                    throw new UserRegistrationException(UserRegistrationException.ExceptionType.Empty_Message, "Name should not be empty.");
+                    throw new UserRegistrationException(UserRegistrationException.ExceptionType.EMPTY_FIRSTNAME, "Name should not be empty.");
                 }
                 else if (Regex.IsMatch(firstName, Regex_FirstName))
                 {
@@ -39,7 +39,7 @@ namespace LambdaUserRegistration
             }
             catch (NullReferenceException)
             {
-                throw new UserRegistrationException(UserRegistrationException.ExceptionType.NULL_Message, "Name should not be null.");
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.INVALID_FIRSTNAME, "Name should not be null.");
             }
         }
         public bool ValidateLastName(string lastName)
@@ -57,7 +57,7 @@ namespace LambdaUserRegistration
             }
             catch
             {
-                throw new UserRegistrationException(UserRegistrationException.ExceptionType.Empty_Message, "Last name should not be empty.");
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.INVALID_LASTNAME, "Last name should not be empty.");
             }
         }
         public bool ValidateEmail(string email)
@@ -75,7 +75,7 @@ namespace LambdaUserRegistration
             }
             catch
             {
-                throw new UserRegistrationException(UserRegistrationException.ExceptionType.Empty_Message, "Email should not be empty.");
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.INVALID_EmailId, "Email should not be empty.");
 
             }
         }
@@ -94,7 +94,7 @@ namespace LambdaUserRegistration
             }
             catch (NullReferenceException)
             {
-                throw new UserRegistrationException(UserRegistrationException.ExceptionType.Empty_Message, "Mobile number should not be empty.");
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.INVALID_MOBILE_NO, "Mobile number should not be empty.");
 
             }
         }
@@ -113,7 +113,7 @@ namespace LambdaUserRegistration
             }
             catch
             {
-                throw new UserRegistrationException(UserRegistrationException.ExceptionType.Empty_Message, "Password should not be empty.");
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.INVALID_PASSWORD, "Password should not be empty.");
             }
         }
         public string CheckMultipleEmail(string Mail1, string Mail2, string Mail3, string Mail4, string Mail5)

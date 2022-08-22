@@ -10,8 +10,16 @@ namespace LambdaUserRegistration
     {
         public enum ExceptionType
         {
-            Empty_Message,
-            NULL_Message
+            EMPTY_FIRSTNAME,
+            INVALID_FIRSTNAME,
+            //EMPTY_LASTNAME,
+            INVALID_LASTNAME,
+            //EMPTY_EMAIL_ID,
+            INVALID_EmailId,
+            //EMPTY_PASSWORD,
+            INVALID_PASSWORD,
+            //EMPTY_MOBILE_NO,
+            INVALID_MOBILE_NO
         }
         private readonly ExceptionType type;
 
