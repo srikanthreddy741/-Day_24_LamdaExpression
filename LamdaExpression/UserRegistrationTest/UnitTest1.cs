@@ -82,5 +82,25 @@ namespace UserRegistrationTest
             Assert.AreEqual(expected, result);
         }
 
+        [Test]
+        public void EmailTest()
+        {
+            string EMail1 = "abc@gamil.com";
+            string EMail2 = "abc.bcd@gmail.com";
+            string EMail3 = "abc.bdc100@gmail.com";
+            string EMail4 = "abc.ghj111@gmail.com";
+            string EMail5 = "abc.efgh@gmail.com";
+            bool result1 = user.ValidateEmail(EMail1);
+            bool result2 = user.ValidateEmail(EMail2);
+            bool result3 = user.ValidateEmail(EMail3);
+            bool result4 = user.ValidateEmail(EMail4);
+            bool result5 = user.ValidateEmail(EMail5);
+            Assert.AreEqual(true, result1);
+            Assert.AreEqual(true, result2);
+            Assert.AreEqual(true, result3);
+            Assert.AreEqual(true, result4);
+            Assert.AreEqual(true, result5);
+        }
+
     }
 }

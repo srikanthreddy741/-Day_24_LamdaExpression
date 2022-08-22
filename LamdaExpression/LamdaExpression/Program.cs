@@ -31,7 +31,6 @@ static void menu(UserRegistrationDetails user)
     Console.Write("Password:     ");
     string password = Console.ReadLine();
 
-
     Console.Write("\n=====Result======\n");
     bool checkFirstName = user.ValidateFirstName(firstName);
     bool checkLastName = user.ValidateLastName(lastName);
@@ -45,4 +44,12 @@ static void menu(UserRegistrationDetails user)
     (checkEmail) ? "Email address is valid" : "Email address is invalid",
     (checkMobileNumber) ? "Mobile number is valid" : "Mobile number is invalid",
     (checkPassword) ? "Password is valid" : "Password is invalid");
+
+    string EMail1 = "abc@gamil.com";
+    string EMail2 = "abc.bcd@gmail.com";
+    string EMail3 = "abc.bdc100@gmail.com";
+    string EMail4 = "abc.ghj111@gmail.com";
+    string EMail5 = "abc.efgh@gmail.com";
+
+    user.CheckMultipleEmail(EMail1, EMail2, EMail3, EMail4, EMail5);
 }
